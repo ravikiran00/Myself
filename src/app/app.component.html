@@ -1,0 +1,268 @@
+<!-- Navigation-->
+<a class="menu-toggle rounded" href="#"><i class="fas fa-bars"></i></a>
+<nav id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+        <li class="sidebar-brand"><a href="#page-top">Start Bootstrap</a></li>
+        <li class="sidebar-nav-item"><a href="#page-top">Home</a></li>
+        <li class="sidebar-nav-item"><a href="#about">About</a></li>
+        <li class="sidebar-nav-item"><a href="#myskills">Skills</a></li>
+        <li class="sidebar-nav-item"><a href="#projects">EXPERIENCE</a></li>
+        <li class="sidebar-nav-item"><a href="#myyoutubechanel">My youtube chanel</a></li>
+        <li class="sidebar-nav-item"><a href="#contactMe">Contact Me</a></li>
+    </ul>
+</nav>
+<!-- Header-->
+<header class="masthead d-flex align-items-center"
+    style="background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url('assets/images/img/bg-masthead.jpg');">
+    <div class="container px-4 px-lg-5 text-center">
+        <h1 class="mb-1">Ravikumar Patil</h1>
+        <h3 class="mb-5"><em>Bachelor Of Engineering In Electronics And TeleCommunication</em></h3>
+        <div class="d-flex flex-wrap">
+            <a class="btn btn-primary btn-xl m-1 flex-fill" href="#about">Find Out More</a>
+            <button class="btn btn-primary btn-xl m-1 flex-fill" (click)="openNoBackdrop(Acadamics)"> My
+                Acadamics</button>
+            <button class="btn btn-primary btn-xl m-1 flex-fill" (click)="openYearWiseDetails(YearWiseDetails)"> Year
+                Wise Details</button>
+        </div>
+    </div>
+</header>
+<!-- About-->
+
+<!--Header Button Action-->
+<ng-template #Acadamics let-offcanvas>
+    <div class="offcanvas-header">
+        <h4 class="offcanvas-title">Acadamics Details</h4>
+        <button type="button" class="btn-close" aria-label="Close" (click)="offcanvas.dismiss('Cross click')"></button>
+    </div>
+    <div class="offcanvas-body">
+        <div class="row">
+            <div class="col-12">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Title Of The Degree</th>
+                            <th scope="col">Passing Year</th>
+                            <th scope="col">Percentage</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @for (Acadamics of MyAcadamics; track Acadamics.TitleOfTheDegree; let i = $index) {
+                        <tr>
+                            <th scope="row">{{ i + 1 }}</th>
+                            <td>{{ Acadamics.TitleOfTheDegree}}</td>
+                            <td>{{ Acadamics.PassingYear }}</td>
+                            <td>{{ Acadamics.Percentage }}</td>
+                        </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row pt-5">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <b>Collage/University</b>
+                    </div>
+                    <div class="card-body">
+                        <tabset>
+                            <tab heading="10th class" id="tab1">
+                                <ul class="pt-4">
+                                    <li><b>Name :</b> Siddhakala Highschool M.Peth Sawarde</li>
+                                    <li><b>Where It Place :</b> Malharpeth</li>
+                                    <li><b>Taluka :</b> Panahala</li>
+                                    <li><b>Dist :</b> Kolhapur</li>
+                                    <li><b>Post :</b> Kale</li>
+                                    <li><b>Pin Code :</b> 416205</li>
+                                </ul>
+                            </tab>
+                            <tab heading="Diploma">
+                                <ul class="pt-4">
+                                    <li><b>Name :</b> D Y Patil Polytechnic Talasande</li>
+                                    <li><b>Where It Place :</b> Talasande</li>
+                                    <li><b>Taluka :</b> Hatkanangale</li>
+                                    <li><b>Dist :</b> Kolhapur</li>
+                                    <li><b>Pin Code :</b> 416113</li>
+                                </ul>
+                            </tab>
+                            <tab heading="BE">
+                                <ul class="pt-4">
+                                    <li><b>Name :</b> Sharad Institute Of Technology College Of Engineering</li>
+                                    <li><b>Where It Place :</b> Yadrav – Ichalkaranji</li>
+                                    <li><b>Taluka :</b> Shirol</li>
+                                    <li><b>Dist :</b> Kolhapur</li>
+                                    <li><b>Pin Code :</b> 416121</li>
+                                </ul>
+                            </tab>
+                            <tab heading="PG-DAC">
+                                <ul class="pt-4">
+                                    <li><b>Name :</b> Shriram Mantri Vidyanidhi Info Tech Academy</li>
+                                    <li><b>Where It Place :</b> 5th Floor, Vidyanidhi Education Complex, Vidyanidhi
+                                        Road, Juhu Scheme, Andheri (W), Mumbai</li>
+                                    <li><b>Pin Code :</b> 400049</li>
+                                </ul>
+                            </tab>
+                        </tabset>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-template>
+
+<ng-template #YearWiseDetails let-offcanvas>
+    <div class="offcanvas-header">
+        <h4 class="offcanvas-title">Year Wise Details</h4>
+        <button type="button" class="btn-close" aria-label="Close" (click)="offcanvas.dismiss('Cross click')"></button>
+    </div>
+    <div class="offcanvas-body">
+        <section style="background-color: #F0F2F5;">
+            <div class="container py-5">
+                <div class="main-timeline">
+                    <div class="timeline left">
+                        <div class="card">
+                            <div class="card-body p-4">
+                                <h3>2009-2010</h3>
+                                <p class="mb-0">I completed my 10th class this year, securing 87% in the mid-semester
+                                    exams and 80% overall. I also hold the 1st rank in my highschool.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline right">
+                        <div class="card">
+                            <div class="card-body p-4">
+                                <h3>2010-2014</h3>
+                                <p class="mb-0">I completed my Diploma in Electronics and Telecommunications this year,
+                                    securing 72% in the 5th semester and 73% in the 6th semester.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline left">
+                        <div class="card">
+                            <div class="card-body p-4">
+                                <h3>2014-2017</h3>
+                                <p class="mb-0">I completed my Bachelor of Engineering in Electronics and
+                                    Telecommunications this year, securing 65% in the 7th semester and 72% in the 8th
+                                    semester.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline right">
+                        <div class="card">
+                            <div class="card-body p-4">
+                                <h3>2017-2018</h3>
+                                <p class="mb-0">I was searching for a job in the electronics field, and I got a job at
+                                    Flash Electronics company. I have been working in this company, for 6 Months as a
+                                    Quality Tester.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline left">
+                        <div class="card">
+                            <div class="card-body p-4">
+                                <h3>2018-2019</h3>
+                                <p class="mb-0">I am preparing for the Pre-CAT. I took the exam once but did not get the
+                                    college I wanted with that rank. After retaking the Pre-CAT, I secured admission to
+                                    my desired college.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline right">
+                        <div class="card">
+                            <div class="card-body p-4">
+                                <h3>2019-2020</h3>
+                                <p class="mb-0">I have completed my CDAC and got a job at Maximus Infoware India Pvt.
+                                    Ltd. as a Fullstack Developer.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline left">
+                        <div class="card">
+                            <div class="card-body p-4">
+                                <h3>2020-2022</h3>
+                                <p class="mb-0">I am working as a Fullstack Developer at Maximus Infoware India Pvt.
+                                    Ltd. for 2 years.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline right">
+                    <div class="card">
+                        <div class="card-body p-4">
+                            <h3>2022-Present</h3>
+                            <p class="mb-0">I am working as a Fullstack Developer at GCO Tech Center Pvt. Ltd. till now.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</ng-template>
+
+
+<!--Header Button Action-->
+
+<section class="content-section bg-light" id="about">
+    <div class="container px-4 px-lg-5 text-center">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-lg-10">
+                <h1 style="font-size: 55px;">HEY, I AM <span style="color: orange;">RAVIKUMAR PATIL</span></h1>
+                <p class="lead mb-5" style="font-size: 33px;">
+                    A Full Stack Web Developer, building a front end of website and web application in integration with
+                    powerful backend server programming.
+                </p>
+                <h1 style="font-size: 55px;">About Me</h1>
+                <p class="lead mb-5" style="font-size: 33px;">
+                    I have 4.5 years of experience as a Fullstack Developer, specializing in designing the frontend of
+                    cross-platform applications. In addition to frontend design,
+                    I have strong expertise in backend development, focusing on building and maintaining efficient,
+                    reusable, and reliable code.
+                    I also ensure that all code is thoroughly tested with proper unit testing, contributing to the
+                    overall quality and robustness of the applications I have develop.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Services-->
+<section class="content-section bg-primary text-white text-center" id="myskills">
+    <app-my-skills></app-my-skills>
+</section>
+<section class="content-section bg-secondary-subtle" id="projects">
+    <app-my-projects></app-my-projects>
+</section>
+<section class="content-section text-center" id="myyoutubechanel">
+    <app-my-youtubechanel></app-my-youtubechanel>
+</section>
+<!-- Call to Action-->
+<section class="content-section bg-primary text-white" id="contactMe">
+    <app-my-contactme></app-my-contactme>
+</section>
+<!-- Map-->
+<!-- <div class="map" id="contact">
+    <iframe src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe>
+    <br />
+    <small><a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A"></a></small>
+</div> -->
+<!-- Footer-->
+<footer class="footer text-center">
+    <div class="container px-4 px-lg-5">
+        <ul class="list-inline mb-5">
+            <li class="list-inline-item">
+                <a class="social-link rounded-circle text-white mr-3" href="#!"><i class="icon-social-facebook"></i></a>
+            </li>
+            <li class="list-inline-item">
+                <a class="social-link rounded-circle text-white mr-3" href="#!"><i class="icon-social-twitter"></i></a>
+            </li>
+            <li class="list-inline-item">
+                <a class="social-link rounded-circle text-white" href="#!"><i class="icon-social-github"></i></a>
+            </li>
+        </ul>
+        <p class="text-muted small mb-0">Copyright &copy; Your Website 2023</p>
+    </div>
+</footer>
+<!-- Scroll to Top Button-->
+<a class="scroll-to-top rounded" href="#page-top"><i class="fas fa-angle-up"></i></a>

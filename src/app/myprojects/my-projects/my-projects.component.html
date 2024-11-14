@@ -1,0 +1,283 @@
+<div class="px-4 px-lg-5 pt-0">
+    <div class="content-section-heading text-center">
+        <h2 class="mb-5">EXPERIENCE</h2>
+    </div>
+    <div class="row">
+        <div class="col-4">
+            <nav [ngbScrollSpyMenu]="spy" class="h-100 flex-column align-items-stretch pe-4 border-end"
+                style="height: 700px;">
+                <nav class="nav nav-pills flex-column">
+                    <a role="button" class="nav-link" ngbScrollSpyItem="nested-1"><b>GCO Tech Center Pvt. Ltd (
+                            2022-Present )</b></a>
+                    <nav class="nav nav-pills flex-column">
+                        <a role="button" class="nav-link ms-3 my-1" ngbScrollSpyItem="nested-1-1" parent="nested-1">GCO
+                            Credit Card Receipt Portal</a>
+                        <a role="button" class="nav-link ms-3 my-1" ngbScrollSpyItem="nested-1-2"
+                            parent="nested-1">IEngage Application</a>
+                    </nav>
+                    <a role="button" class="nav-link" ngbScrollSpyItem="nested-2"><b>Maximus Infoware India Pvt. Ltd. (
+                            2020-2022 )</b></a>
+                    <nav class="nav nav-pills flex-column">
+                        <a role="button" class="nav-link ms-3 my-1" ngbScrollSpyItem="nested-2-1" parent="nested-2">UPI
+                            ( Unified Payment System )</a>
+                        <!-- <a role="button" class="nav-link ms-3 my-1" ngbScrollSpyItem="nested-2-2" parent="nested-2">IMPS ( Immediate Payment Service )</a> -->
+                        <a role="button" class="nav-link ms-3 my-1" ngbScrollSpyItem="nested-2-2" parent="nested-2">UPI
+                            Common Portal. IMPS and eKYC Portal.</a>
+                    </nav>
+                </nav>
+            </nav>
+        </div>
+
+        <div class="col-8 pt-1">
+            <div ngbScrollSpy #spy="ngbScrollSpy" rootMargin="16px" class="bg-light p-3 rounded-2 mb-3"
+                style="height: 700px; border: 2px solid skyblue;">
+                <h4 ngbScrollSpyFragment="nested-1" class="text-primary"><b>GCO Tech Center Pvt. Ltd</b></h4>
+                <p>
+                    GCO Technology Center started in 2010; It was formed as a company with a dynamic team after
+                    separating from one of India’s
+                    top reputable companies, which has the vision. Its vision is to develop software for managing
+                    pharmaceutical companies’
+                    events incorporating the required compliance and quality modules.
+                </p>
+                <h5 ngbScrollSpyFragment="nested-1-1"><b>GCO Credit Card Receipt Portal</b> <button
+                        class="btn btn-outline-primary mb-2 me-2 ms-4" (click)="openxl(content,'GCO Credit Card Receipt Portal')">See Portal
+                        Image</button></h5>
+                <p style="font-size: large;"><span style="font-style: italic;" class="text-success">Duration</span> : 1
+                    Year</p>
+                <p style="font-size: large;"><span style="font-style: italic;" class="text-success">Role</span> : .Net
+                    Full Stack Developer</p>
+                <p style="font-size: large;"><span style="font-style: italic;" class="text-success">Project description
+                        :</span></p>
+                <p>
+                    I was Team Lead for this Project. GCO Credit card portal project was developed for internal use
+                    only. GCO has different vendors and projects on which GCO financial, or Higher team do
+                    transactions against projects. Around 15 or 16 people there which they are doing the transaction
+                    on behalf of GCO. So whatever transaction they are doing they carry the payment slip against the
+                    transaction. GCO finance team received transaction statement from bank, and they collect
+                    payment slip against that, they are doing without any system and maintaining this information
+                    was so difficult. So, to overcome this documentation headache we have developed this
+                    application.
+                </p>
+                <p>
+                    This application has two parts one is Admin Module and Second one is User Module. Admin
+                    module has a right to upload the statement against the user. If admin uploads the bank
+                    statement against any user, then that user will receive the mail that you’re this month statement
+                    uploaded please upload the receipts against that. So, users upload the payment slip against
+                    every debited transaction. Once he uploads the slip then all admins will receive mail that this-this
+                    user has uploaded payment slip against this transaction id please take action against that. So,
+                    admin will approve or reject transaction based on his knowledge and whatever action it taken
+                    that will reflect on User module to that user. So, using this application we will maintain the data
+                    month wise.
+                </p>
+                <p>
+                    We have Used Azure Storage Explorer for Storing Bank statement files as well as receipts for
+                    those users. This application has oneSignal Browser notification functionality, if user subscribe
+                    this functionality, then he will receive browser notification on desktop. We have added a camera
+                    service for users as well to upload receipt by clicking with mobile camera and will store it into
+                    his
+                    gallery. After he uploads the receipt in gallery, he will use afterwords for any transaction.
+                </p>
+                <p style="font-size: large;"><span style="font-style: italic;" class="text-success">Roles and
+                        responsibilities :</span></p>
+                <ul>
+                    <li>Understand businessrequirements and perform impact analysis.</li>
+                    <li>Code building and performing Module Integration Testing.</li>
+                    <li>Interact with client for taking the requirements.</li>
+                    <li>Review current systems, develop ideas for improving systems, work closely with data analysts,
+                        designers and staff,
+                        write program codes, test the application before going live, prepare manuals for users and
+                        maintain systems once
+                        they start running.
+                    </li>
+                </ul>
+                <p style="font-size: large;"><span style="font-style: italic;" class="text-success">Tools and Technology
+                        used :</span></p>
+                <ul>
+                    <li>Visual Studio. (2022)</li>
+                    <li>Microsoft SQL Server. (2019)</li>
+                    <li>Azure DevOps.</li>
+                    <li>Azure Storage Explorer.</li>
+                    <li>oneSignal Browser Notification.</li>
+                    <li>C#, ASP.NET MVC, Entity Framework, Windows Service, MSSQL Server, Web API, HTML, CSS,
+                        JavaScript, Angular,
+                        jQuery, Azure.
+                    </li>
+                </ul>
+                <h5 ngbScrollSpyFragment="nested-1-2"><b>IEngage Application</b></h5>
+                <p style="font-size: large;"><span style="font-style: italic;" class="text-success">Duration</span> : 1
+                    Year</p>
+                <p style="font-size: large;"><span style="font-style: italic;" class="text-success">Role</span> : .Net
+                    Full Stack Developer</p>
+                <p style="font-size: large;"><span style="font-style: italic;" class="text-success">Project description
+                        :</span></p>
+                <p>
+                    iEngage is a versatile application designed specifically for Pharmaceutical organizations to
+                    streamline the management of global events related to the promotion and showcasing of medical
+                    drugs and products. This customizable tool caters to various event types, accommodating diverse
+                    roles such as presenters, speakers, attendees, and the audience. Available on both websites and
+                    mobile applications, iEngage offers a user-friendly platform for organizations to effortlessly
+                    oversee, record, and track events.
+
+                </p>
+                <p>
+                    Key features of iEngage include the capability to create personalized event websites for seamless
+                    attendee registrations and efficient financial management. The application's adaptability allows
+                    organizations to tailor it to their specific needs, ensuring a smooth and tailored experience for
+                    both organizers and participants. Moreover, iEngage incorporates country-specific Rules, Policies,
+                    and Guidelines related to Pharmaceutical events, providing a comprehensive and compliant
+                    approach to event management. With iEngage, pharmaceutical organizations can enhance their
+                    event coordination, maintain regulatory compliance, and create a more engaging experience for all
+                    stakeholders involved.
+                </p>
+                <p style="font-size: large;"><span style="font-style: italic;" class="text-success">Roles and
+                        responsibilities :</span></p>
+                <ul>
+                    <li>Review current systems, develop ideas for improving systems, work closely with data analysts,
+                        designers and staff,
+                        write program codes, test the application before going live, prepare manuals for users and
+                        maintain systems once
+                        they start running.
+                    </li>
+                    <li>Getting interacted with Clientsfor Change request.</li>
+                    <li>Understand businessrequirements and perform impact analysis.</li>
+                    <li>Build clean and efficient code based on user needs.</li>
+                </ul>
+                <p style="font-size: large;"><span style="font-style: italic;" class="text-success">Tools and Technology
+                        used :</span></p>
+                <ul>
+                    <li>Visual Studio. (2022)</li>
+                    <li>Microsoft SQL Server. (2019)</li>
+                    <li>Azure DevOps.</li>
+                    <li>Azure Storage Explorer.</li>
+                    <li>C#, ASP.NET MVC, Entity Framework, Windows Service, MSSQL Server, Web API, HTML, CSS,
+                        JavaScript, Angular,
+                        jQuery, Azure.
+                    </li>
+                </ul>
+                <h4 ngbScrollSpyFragment="nested-2" class="text-primary"><b>Maximus Infoware India Pvt. Ltd. ( 2020-2022
+                        )</b></h4>
+                <p>
+                    <b>Maximus</b> is a global payment infrastructure and digital enablement company, offering a wide
+                    range of ecosystem solutions in the Payments,
+                    Reconciliation, Remote Monitoring and Self-Service domains. The Company’s offerings cater to banks,
+                    fintech companies, aggregators,
+                    transit, retail, and other customer service organisations. Its customer footprint spans 10
+                    countries.
+                </p>
+                <h5 ngbScrollSpyFragment="nested-2-1"><b>UPI ( Unified Payment System )</b></h5>
+                <p style="font-size: large;"><span style="font-style: italic;" class="text-success">Duration</span> : 1
+                    Year</p>
+                <p style="font-size: large;"><span style="font-style: italic;" class="text-success">Role</span> : .Net
+                    Full Stack Developer</p>
+                <p style="font-size: large;"><span style="font-style: italic;" class="text-success">Project description
+                        :</span></p>
+                <p>
+                    Project developed for UPI Transactions in ASP.Net 4.0. In this project we are handle all Financial
+                    and non-financial transactions, like Debit, Credit, Mandate and UDIR transaction come into the
+                    financial transaction and List of Accounts, Mini-Statement and Balance inquiry comes under
+                    nonfinancial transactions. Here too much taking care of dataflow and validation for each and every
+                    transaction which comes under financial transactions. Once the vendors come for UPI integration
+                    then first, we decide which message format CBS will support (XML, ISO8583) based on that we
+                    developed our application and we perform the around 65 to 70 test cases with CBS (Technical
+                    Team from bank side) which include Debit, Credit, Mandate, Verification, Balance inquiry and List
+                    Of account positive and negative scenario. Once comfort round is done with bank then we are
+                    going to perform around 250 to 300 test cases with NPCI. Based on the test cases.
+                </p>
+                <p style="font-size: large;"><span style="font-style: italic;" class="text-success">Roles and
+                        responsibilities :</span></p>
+                <ul>
+                    <li>Preparation of Code Change Specification, Code review and Code analysis.</li>
+                    <li>Writing codes, implemented in multiple modules.</li>
+                    <li>Code building and performing Module Integration Testing.</li>
+                    <li>Understand businessrequirements and perform impact analysis.</li>
+                    <li>Arrangement of Project Demo to Client.</li>
+                    <li>Getting interacted with Clientsfor Change request and successfully solving the issues.</li>
+                </ul>
+                <p style="font-size: large;"><span style="font-style: italic;" class="text-success">Tools and Technology
+                        used :</span></p>
+                <ul>
+                    <li>Visual Studio.</li>
+                    <li>Microsoft SQL Server.</li>
+                    <li>SVN</li>
+                    <li>C#, ASP.NET MVC, Entity Framework, Windows Service, MSSQL Server, Web API, HTML, CSS, Bootstrap,
+                        JavaScript,
+                        jQuery
+                    </li>
+                </ul>
+                <h5 ngbScrollSpyFragment="nested-2-2"><b>UPI Common Portal. IMPS and eKYC Portal.</b></h5>
+                <p style="font-size: large;"><span style="font-style: italic;" class="text-success">Duration</span> : 6
+                    Months</p>
+                <p style="font-size: large;"><span style="font-style: italic;" class="text-success">Role</span> : .Net
+                    Full Stack Developer</p>
+                <p style="font-size: large;"><span style="font-style: italic;" class="text-success">Project description
+                        :</span></p>
+                <p>
+                    Project developed for Support team and every bank which are live on UPI. In this project we are
+                    working on .Net MVC framework. This project was developed to see the daily financial
+                    transaction, non-financial transaction, Technical and business decline transaction and its
+                    percentage, and generate XSLX of Pdf file for further reporting. I was saying this common portal
+                    for UPI live banks because we will see every banks report under one portal. Once the user logs in
+                    then he will see the TLF, date wise transaction mode wise transaction type wise. Also, he can
+                    download all the TLF in XLSX and PDF for further business working.
+                    IMPS and eKYC Project developed for see the transaction details daily basis. This is also
+                    developed for generate TLF report for eKYC transaction and IMPS transaction and also download
+                    the same in Excel file and PDF file. IMPS and eKYC portal are both different and developed in .Net
+                    MVC framework.
+                </p>
+                <p style="font-size: large;"><span style="font-style: italic;" class="text-success">Roles and
+                        responsibilities :</span></p>
+                <ul>
+                    <li>Code building and performing Module Integration Testing.</li>
+                    <li>Develop front-end, design back-end of the application, create database and servers, meet
+                        technical needs.</li>
+                    <li>Understand businessrequirements and perform impact analysis.</li>
+                    <li>Build clean and efficient code based on user needs.</li>
+                </ul>
+                <p style="font-size: large;"><span style="font-style: italic;" class="text-success">Tools and Technology
+                        used :</span></p>
+                <ul>
+                    <li>Visual Studio.</li>
+                    <li>Microsoft SQL Server.</li>
+                    <li>SVN</li>
+                    <li>C#, ASP.NET MVC, Entity Framework, Windows Service, MSSQL Server, Web API, HTML, CSS, Bootstrap,
+                        JavaScript,
+                        jQuery
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<ng-template #content let-modal>
+    <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title">{{imageModalTitle}}</h4>
+            <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+        </div>
+        <div class="modal-body">
+            <ngb-carousel #carousel [interval]="3000" [pauseOnHover]="pauseOnHover" [pauseOnFocus]="pauseOnFocus"
+                (slide)="onSlide($event)">
+                @for (img of images; track img; let i = $index) {
+                <ng-template ngbSlide>
+                    <div class="carousel-caption">
+                        <h3>My slide {{ i + 1 }} title</h3>
+                    </div>
+                    <div class="picsum-img-wrapper">
+                        <img [src]="img" alt="My image {{ i + 1 }} description" width="100%" height="100%" />
+                    </div>
+                </ng-template>
+                }
+            </ngb-carousel>
+
+            <hr />
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="pauseOnHover" [(ngModel)]="pauseOnHover" />
+                <label class="form-check-label" for="pauseOnHover">Pause on hover</label>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" (click)="modal.close('Close click')">Close</button>
+        </div>
+    </div>
+</ng-template>
+<span id="apendchild"></span>

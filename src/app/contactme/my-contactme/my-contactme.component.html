@@ -1,0 +1,136 @@
+<div class="container px-4 px-lg-5">
+  <h2 class="mb-4 text-center">CONTACT ME</h2>
+  <div class="row">
+      <div class="col-4 col-lg-4 flex-fill">
+          <div class="card h-100">
+              <div class="card-body">
+                <form [formGroup]="UserGroup">
+                      <div class="row">
+                          <label class="form-label"><strong>Name<span
+                                      class="text-danger">*</span></strong></label>
+                          <input type="text" class="form-control" placeholder="Enter Your Name"
+                              formControlName="UserName" >
+                            @if(!UserName.valid && UserName.touched){
+                                @if(UserName.value == ""){
+                                    <span class="text-danger">Please enter a valid username.</span>
+                                }
+                            }
+                      </div>
+                      <div class="row pt-2">
+                          <label class="form-label"><strong>Email<span
+                                      class="text-danger">*</span></strong></label>
+                          <input type="text" class="form-control" placeholder="Enter Your Mail Id"
+                               formControlName="UserEmail" >
+                               @if(!UserEmail.valid && UserEmail.touched){
+                                @if(UserEmail.value == ""){
+                                    <span class="text-danger">Please enter a valid Email Address</span>
+                                }
+                                @else if(UserEmail.hasError("email")){
+                                    <span class="text-danger">Email Address is not valid</span>
+                                }
+                               }
+                      </div>
+                      <div class="row pt-2">
+                          <label class="form-label"><strong>Mobile No.</strong></label>
+                          <input type="text" class="form-control" placeholder="Enter Your Mobile Number"
+                               formControlName="UserMobileNo">
+                          @if(!UserMobileNo.valid && UserMobileNo.touched){
+                            @if(UserMobileNo.hasError("minLength") || UserMobileNo.hasError("maxlength")){
+                                <span class="text-danger">Please enter a valid mobile number with 10 to 12 digits.</span>
+                            }
+                          }
+                      </div>
+                      <div class="row pt-2">
+                          <label class="form-label"><strong>Message<span
+                                      class="text-danger">*</span></strong></label>
+                          <textarea rows="5" cols="5" class="form-control" placeholder="Enter Your Message"
+                               formControlName="UserMessage"></textarea>
+                               @if(!UserMessage.valid && UserMessage.touched){
+                                @if (UserMessage.value == "") {
+                                    <span class="text-danger">Please enter your Message</span>
+                                }
+                               }
+                      </div>
+                    </form>
+              </div>
+          </div>
+      </div>
+      <div class="col-10 col-lg-8 flex-fill">
+          <div class="card h-100">
+              <div class="card-body">
+                  <div class="row">
+                      <div class="justify-content-center">
+                          <span class="service-icon rounded-circle mx-auto mb-3 center"><img
+                                  class="img-fluid pb-5" src="assets/images/img/user.png" alt="..." /></span>
+                      </div>
+                  </div>
+                  <div class="row g-3">
+                      <div class="col-sm-2">
+                          <h6 class="mb-0 fs-5">Name :</h6>
+                      </div>
+                      @if(UserName.value == ""){
+                      <div class="col-sm-3 text-muted text-decoration-line-through text-start">
+                          User Name
+                      </div>
+                      }
+                      @else {
+                      <div class="col-sm-3 text-secondary fs-5 fw-bold text-start">
+                          {{UserName.value }}
+                      </div>
+                      }
+
+                      <div class="col-sm-2">
+                          <h6 class="mb-0 fs-5">Email :</h6>
+                      </div>
+                      @if(UserEmail.value == ""){
+                      <div class="col-sm-5 text-muted text-decoration-line-through text-start">
+                          User EmailId
+                      </div>
+                      }
+                      @else {
+                      <div class="col-sm-5 text-secondary fs-5 fw-bold text-start">
+                          {{UserEmail.value}}
+                      </div>
+                      }
+                  </div>
+                  <hr />
+                  <div class="row g-3">
+                      <div class="col-sm-3">
+                          <h6 class="mb-0 fs-5">Mobile No. :</h6>
+                      </div>
+                      @if(UserMobileNo.value == ""){
+                      <div class="col-sm-5 text-muted text-decoration-line-through text-start">
+                          User Mobile Number
+                      </div>
+                      }
+                      @else {
+                      <div class="col-sm-5 text-secondary fs-5 fw-bold text-start">
+                          {{UserMobileNo.value| uppercase}}
+                      </div>
+                      }
+                  </div>
+                  <hr />
+                  <div class="row g-3">
+                      <div class="col-sm-3">
+                          <h6 class="mb-0 fs-5">Message :</h6>
+                      </div>
+                      @if(UserMessage.value == ""){
+                      <div class="col-sm-9 text-muted text-decoration-line-through text-start">
+                          Message...
+                      </div>
+                      }
+                      @else {
+                      <div class="col-sm-9 text-secondary fs-5 fw-bold text-start">
+                          {{UserMessage.value }}
+                      </div>
+                      }
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="text-center pt-4">
+      <a class="btn btn-xl btn-light me-4" href="#!" (click)="formSubmit()">Click Me!</a>
+  </div>
+
+</div>

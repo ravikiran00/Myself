@@ -1,0 +1,36 @@
+<!-- <div class="px-4 px-lg-5">
+  <div class="content-section-heading text-center">
+    <h2 class="mb-5">My Tech video</h2>
+  </div>
+  <div class="row">
+    @for (item of videoLinks; track $index) {
+    <div class="col-lg-3 col-md-4 col-sm-6">
+      <div class="video-container">
+        <youtube-player class="youtube-player" [videoId]="item" suggestedQuality="highres" [width]="432" [height]="24"></youtube-player>
+      </div>      
+    </div>
+    }
+  </div>
+</div>
+ -->
+
+
+ <div class="px-1 px-lg-5">
+  <div class="content-section-heading text-center">
+    <h2 class="mb-5">My <strong style="color: red;">Tech</strong> video</h2>
+  </div>
+  <div class="row">
+    <div class="d-flex flex-wrap">
+      @for (item of videoLinks; track $index) {
+        @if ($index == 0) {
+          <youtube-player class="m-1 flex-fill" [playerVars]="{controls: 1, mute: 1, autoplay: 1}" [videoId]="item" suggestedQuality="highres" [width]="390" [height]="243"></youtube-player>
+        }
+        @else{
+          <youtube-player class="m-1 flex-fill" [videoId]="item" suggestedQuality="highres" [width]="390" [height]="243"></youtube-player>
+        }
+        
+        }
+    </div>    
+  </div>
+</div>
+
